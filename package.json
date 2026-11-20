@@ -1,0 +1,71 @@
+{
+  "name": "@webship-js/filament-steps",
+  "version": "2.0.0",
+  "description": "Cucumber step definitions for admin panels built on a Laravel app, a plugin for webship-js (Playwright and Cucumber): the panel's navigation, its pages and breadcrumbs, the dashboard widgets (stats, charts, tables), the tables of its resources (search, sorting, filters and their indicators, columns, pages, grouping, reordering, row and bulk actions with their confirmations), the forms (every kind of field, repeaters, builder blocks, tabs, wizard steps, validation errors), relation managers and view pages, modals and slide-overs, notifications, global search, the user menu and its theme, and tenancy. It brings @webship-js/laravel-steps along for the login, the password reset through the mail and the framework's pages.",
+  "main": "tests/step-definitions/filament-defaults.js",
+  "files": [
+    "tests/step-definitions/",
+    "tests/features/",
+    "tests/panel/",
+    "tests/assets/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry": "cucumber-js --config cucumber.js --dry-run",
+    "test:examples": "node tests/check-examples.js",
+    "test:paths": "node tests/check-paths.js",
+    "test:must-fail": "node tests/check-must-fail.js",
+    "test:panel": "PANEL_PATH=/admin FEATURES='tests/panel/**/*.feature' cucumber-js --config cucumber.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports",
+    "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js"
+  },
+  "keywords": [
+    "webship-js",
+    "filament",
+    "laravel",
+    "livewire",
+    "admin-panel",
+    "cucumber",
+    "cucumber-js",
+    "playwright",
+    "bdd",
+    "testing",
+    "e2e",
+    "gherkin"
+  ],
+  "author": "Webship.co",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webship/filament-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webship/filament-steps/issues"
+  },
+  "homepage": "https://github.com/webship/filament-steps#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "dependencies": {
+    "@webship-js/laravel-steps": "^2.0.0"
+  },
+  "peerDependencies": {
+    "webship-js": "^2.0.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "webship-js": "^2.0.16"
+  },
+  "overrides": {
+    "@cucumber/cucumber": "^12"
+  }
+}
