@@ -58,19 +58,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # The steps this pack builds on (the panel's user menu, its toasts, its login form) are in the
-      # 2.0.x branch of the Laravel pack, released as 2.0.1: until that release is on npm, the job
-      # takes them from the branch.
-      - name: Take the Laravel pack's steps from its 2.0.x branch until 2.0.1 is on npm
-        run: |
-          if node -e "const v = require('@webship-js/laravel-steps/package.json').version.split('.').map(Number); process.exit(v[0] > 2 || v[1] > 0 || v[2] >= 1 ? 0 : 1)"; then
-            echo "The Laravel pack on npm is new enough."
-          else
-            git clone --quiet --depth 1 --branch 2.0.x https://github.com/webship/laravel-steps.git "$RUNNER_TEMP/laravel-steps"
-            cp -r "$RUNNER_TEMP/laravel-steps/tests/step-definitions/." node_modules/@webship-js/laravel-steps/tests/step-definitions/
-            echo "The Laravel pack's steps at $(git -C "$RUNNER_TEMP/laravel-steps" log -1 --format='%h %s')."
-          fi
-
       - name: Check the JSDoc examples and feature steps against the step regexes (and that no phrase names a platform)
         run: npm run test:examples
 
