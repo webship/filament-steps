@@ -56,7 +56,7 @@
     "node": ">= 20.0"
   },
   "dependencies": {
-    "@webship-js/laravel-steps": "^2.0.0"
+    "@webship-js/laravel-steps": "^2.0.1"
   },
   "peerDependencies": {
     "webship-js": "^2.0.16"
