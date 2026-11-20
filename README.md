@@ -483,7 +483,7 @@ ACCOUNTS_ONLY=1 SITE_DIR="$PWD/../filament-demo" .github/scripts/build-ddev-site
 
 Every page a step touches was opened in a real browser first, and the step was written from what is there: the roles and names of the accessibility tree, the panel's own classes and attributes, what the page does while it waits for the server (the requests, the loading mark, the transitions of modals and dropdowns, the single-page navigation), the exact messages. The steps are proven on the panel 5.11.4 (with its components 4.4.8 and Laravel 12.71.0, PHP 8.4) in the official demo app at `eb48a72` of its `5.x` branch and in a new app with the panel installed the documented way, in US English, with Chromium.
 
-Not covered: the panel's release line 4 and earlier (its markup differs), a panel in a language other than English (the steps read the panel's English labels where a control has no other name: "Filter", "Apply filters", "Delete", "Sign out"), a panel's own plugins, and the custom pages and widgets an app draws itself (the steps read the panel's components).
+Not covered: the panel's release line 4 and earlier (its markup differs), a panel in a language other than English (the steps read the panel's English labels where a control has no other name: "Filter", "Apply filters", "Delete", "Sign out"), the query builder filter (its rules are added constraint by constraint; a filter step sets a filter by its label), a date picker the panel draws itself (`native(false)`: the steps type into the browser's own date and date-time inputs), a panel's own plugins, and the custom pages and widgets an app draws itself (the steps read the panel's components).
 
 ## License
 
