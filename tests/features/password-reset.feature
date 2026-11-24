@@ -12,8 +12,8 @@ Feature: A forgotten password, reset through the mail
     When I fill in "Email address" with the email of "administrator"
     And I press "Send email"
     Then I should see the success notification "We have emailed your password reset link."
-    And an email with the subject "Reset Password Notification" should be sent to "administrator"
-    And the email with the subject "Reset Password Notification" to "administrator" should contain "This password reset link will expire in 60 minutes."
+    And an email with the subject "Reset your password" should be sent to "administrator"
+    And the email with the subject "Reset your password" to "administrator" should contain "This password reset link will expire in 60 minutes."
     When I open the "Reset Password" link of the email to "administrator"
     Then the page heading should be "Reset your password"
     And the "Email address" field should be read only
