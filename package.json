@@ -1,6 +1,6 @@
 {
   "name": "@webship-js/filament-steps",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cucumber step definitions for admin panels built on a Laravel app, a plugin for webship-js (Playwright and Cucumber): the panel's navigation, its pages and breadcrumbs, the dashboard widgets (stats, charts, tables), the tables of its resources (search, sorting, filters and their indicators, columns, pages, grouping, reordering, row and bulk actions with their confirmations), the forms (every kind of field, repeaters, builder blocks, tabs, wizard steps, validation errors), relation managers and view pages, modals and slide-overs, notifications, global search, the user menu and its theme, and tenancy. It brings @webship-js/laravel-steps along for the login, the password reset through the mail and the framework's pages.",
   "main": "tests/step-definitions/filament-defaults.js",
   "files": [
