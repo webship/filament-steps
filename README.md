@@ -58,7 +58,7 @@ runs the features of a new panel against it twice; see
 
 ## From nothing to a green run
 
-What the machine needs: Docker, [DDEV](https://ddev.com), git, python3, and Node.js 20 or later with npm. PHP, Composer, the database and the mail catcher run in DDEV's containers.
+What the machine needs: Docker, [DDEV](https://ddev.com), git, python3, and Node.js 24 or later with npm. PHP, Composer, the database and the mail catcher run in DDEV's containers.
 
 **1. The app.** The pack's own build script (the one CI runs) makes the panel's official demo app ([filamentphp/demo](https://github.com/filamentphp/demo), MIT) in a DDEV project of type `laravel`: the head of its `5.x` branch with the newest release of the panel, its own seed (a shop, a blog, an HR suite, an admin panel at the root of the app and a second panel with teams at `/app`), the two accounts of [Test users](#test-users) and the test records the features read. It takes about five minutes.
 
@@ -194,7 +194,7 @@ Not tested: registration and new teams of the app panel, its email verification 
 
 ## Requirements
 
-- Node.js 20 or later
+- Node.js 24 or later
 - A webship-js 2.0 test project (webship-js 2.0.16 or later)
 - An app with a panel (the panel's release line 5; the panel at the root of the app or at a path of its own), and accounts on it for the suite
 
